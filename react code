@@ -1,0 +1,186 @@
+import React from 'react';
+import './Style/Home.css'; // Import your CSS file for styling
+import { Link } from 'react-router-dom';
+
+const Home = () => {
+  return (
+    <div>
+      <div className="bgimage"></div>
+      <header className='header'>
+        <nav className="nav">
+          <a href="#home" className="link">Home</a>
+          <a href="#about" className="link">About</a>
+          <a href="#features" className="link">Features</a>
+          <a href="#contact" className="link">Contact</a>
+          <a href="#s" className="link">Feedback</a>
+          <Link to="/User" className="link">Login</Link>
+        </nav>
+      </header>
+
+      <section id="home" className="a">
+        <h1>Welcome to EcoBill Solutions</h1>
+        <p>Your trusted partner in agriculture products and services.</p>
+        <button className="button">Get Started</button>
+      </section>
+
+      <section id="features" className="features">
+        <h2>Our Features</h2>
+        <div className="n">
+          <h3>Product Availability</h3>
+          <p>Check and purchase agricultural products from your nearest retailers.</p>
+        </div>
+        <div className="n">
+          <h3>Retailer Management</h3>
+          <p>Manage your shop’s inventory, generate bills, and handle delivery orders.</p>
+        </div>
+        <div className="n">
+          <h3>Delivery Management</h3>
+          <p>Find delivery agents and manage delivery orders efficiently.</p>
+        </div>
+      </section>
+
+      <section id="about" className="about">
+        <h2>About Us</h2>
+        <p>EcoBill Solutions is dedicated to enhancing agricultural practices by connecting farmers, retailers, and delivery agents. Our platform streamlines product management, order processing, and delivery, making agriculture more efficient and accessible.</p>
+      </section>
+
+      <section id="s" className="y">
+        <h2>What Our Users Say</h2>
+        <div className="h">
+          <p>"This application has transformed how we manage our agricultural needs!"</p>
+          <cite>- Satisfied Farmer</cite>
+        </div>
+        <div className="h">
+          <p>"The platform makes it easy to manage my shop and handle deliveries."</p>
+          <cite>- Happy Retailer</cite>
+        </div>
+      </section>
+
+      <footer id="contact" className="footer">
+        <p><a href="#contact" className="m">Contact Us</a></p>
+        <p>&copy; 2024 EcoBill Solutions</p>
+        <p>Contact us: <a href="mailto:agri@ecobillsolutions.com">agri@ecobillsolutions.com</a></p>
+      </footer>
+    </div>
+  );
+};
+
+export default Home;
+
+
+
+
+
+
+.bgimage {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('./Image/d.jpg'); 
+  background-size: cover;  
+  background-position: center;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8); 
+  color: aliceblue;
+  padding: 10px 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: left;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.a, .features, .about, .y {
+  position: relative;
+  padding: 40px 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.a {
+  padding: 60px 20px;
+}
+
+.a h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.a p, .about p {
+  font-size: 1.2em;
+}
+
+.button {
+  background-color: #005a9c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #004080;
+}
+
+.n, .h {
+  margin: 20px 0;
+}
+
+.n h3 {
+  margin: 10px 0;
+  font-size: 1.8em;
+}
+
+.h p {
+  font-style: italic;
+  font-size: 1.2em;
+}
+.footer {
+  background: rgba(0, 0, 0, 0.8);
+  
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* Ensure it spans the full width */
+}
+
+
+.footer p {
+  margin: 10px 0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.m {
+  font-weight: bold;
+}
+
+
+
